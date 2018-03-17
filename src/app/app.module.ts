@@ -12,6 +12,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {HttpClientModule} from '@angular/common/http';
 import {UserService} from './user.service';
+import {FormsModule} from '@angular/forms';
 
 const routes: Routes = [
   // 사용자 화면
@@ -36,6 +37,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
     FlexLayoutModule,
