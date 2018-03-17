@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../environments/environment';
 import {TodoVO} from './domain/todo.vo';
+import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 export class UserService {
@@ -16,7 +17,7 @@ export class UserService {
     });
   }
 
-  getTodoList() {
+  getTodoList(): Observable<TodoVO[]> {
     return this.http.get<TodoVO[]>(this.SERVER + '/api/todo');
   }
 }

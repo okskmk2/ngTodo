@@ -17,12 +17,12 @@
         <div class="th">수정일</div>
         <div class="th">삭제</div>
       </div>
-      <div class="tr">
-        <div class="td">a</div>
-        <div class="td">b</div>
-        <div class="td">c</div>
-        <div class="td">d</div>
-        <div class="td">e</div>
+      <div class="tr" *ngFor="let todo of todoList">
+        <div class="td">{{todo.isFinished}}</div>
+        <div class="td">{{todo.todo}}</div>
+        <div class="td">{{todo.created}}</div>
+        <div class="td">{{todo.updated}}</div>
+        <div class="td"><button mat-raised-button color="warn">삭제</button></div>
       </div>
     </div>
   </mat-card-content>

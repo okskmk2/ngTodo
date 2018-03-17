@@ -11,6 +11,7 @@ import {MatButtonModule, MatCardModule, MatIconModule, MatMenuModule, MatToolbar
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {HttpClientModule} from '@angular/common/http';
+import {UserService} from './user.service';
 
 const routes: Routes = [
   // 사용자 화면
@@ -44,7 +45,7 @@ const routes: Routes = [
     MatButtonModule,
     MatCardModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
