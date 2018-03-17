@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { JqueryComponent } from './jquery/jquery.component';
 import { AngularComponent } from './angular/angular.component';
 import {RouterModule, Routes} from '@angular/router';
-import * as path from 'path';
+import {MatToolbarModule} from '@angular/material';
 
 const routes: Routes = [
   // 사용자 화면
@@ -32,6 +32,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
