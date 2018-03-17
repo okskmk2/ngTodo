@@ -10,6 +10,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {MatButtonModule, MatCardModule, MatIconModule, MatMenuModule, MatToolbarModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {HttpClientModule} from '@angular/common/http';
 
 const routes: Routes = [
   // 사용자 화면
@@ -35,6 +36,7 @@ const routes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
+    HttpClientModule,
     FlexLayoutModule,
     MatToolbarModule,
     MatIconModule,
