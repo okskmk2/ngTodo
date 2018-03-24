@@ -2,7 +2,7 @@
 // public, protected, private 도 typescript에서만 존재
 
 class Student {
-  // fullName;
+
   constructor(firstName, middleInitial, lastName) {
     this.fullName = firstName + " " + middleInitial + " " + lastName;
   }
