@@ -8,9 +8,12 @@
 <body>
   <script>
     for(var i=0; i<5; ++i) {
-      $("<h1></h1>").text(i).on("click", function(){
-        console.log(i);
-      }).appendTo("body");
+      (function (x) {
+        $("<h1></h1>").text(i).on("click", function(){
+          console.log(x);
+        }).appendTo("body");
+      })(i)
+
     }
 
   </script>
