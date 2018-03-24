@@ -16,6 +16,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {HttpClientModule} from '@angular/common/http';
 import {UserService} from './user.service';
 import {FormsModule} from '@angular/forms';
+import { HighlightDirective } from './highlight.directive';
 
 const routes: Routes = [
   // 사용자 화면
@@ -35,6 +36,7 @@ const routes: Routes = [
     IndexComponent,
     HomeComponent,
     JqueryComponent,
+    HighlightDirective,
     AngularComponent
   ],
   imports: [
