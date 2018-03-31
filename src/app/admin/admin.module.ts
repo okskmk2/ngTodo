@@ -4,7 +4,7 @@ import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
 import { NewsComponent } from './news/news.component';
 import {RouterModule, Routes} from '@angular/router';
-import {MatCardModule, MatExpansionModule, MatToolbarModule} from '@angular/material';
+import {MatCardModule, MatExpansionModule, MatPaginatorModule, MatToolbarModule} from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {AdminService} from './admin.service';
 
@@ -23,6 +23,7 @@ const routes: Routes = [
     MatToolbarModule,
     MatExpansionModule,
     MatCardModule,
+    MatPaginatorModule,
   ],
   declarations: [AdminComponent, HomeComponent, NewsComponent],
   providers: [AdminService]
