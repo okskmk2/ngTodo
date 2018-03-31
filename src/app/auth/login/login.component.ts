@@ -16,5 +16,5 @@ export class LoginComponent implements OnInit {
       .subscribe(value => {
         this.naverUrl = value['url'];
       });
-
+  }
 }
