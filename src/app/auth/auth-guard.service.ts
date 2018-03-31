@@ -57,4 +57,23 @@ export class AuthGuardService implements CanLoad, CanActivate, CanActivateChild 
     this.router.navigateByUrl('/login');
     return false;
   }
+
+
+  isAuthenticated(): boolean {
+    const token = localStorage.getItem('token');
+
+    if (token && !this.jwtHelper.isTokenExpired(token)) {
+      // console.log(this.jwtHelper.decodeToken(token));
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  logOut() {
+    // 스토리지에 저장된 토큰 정보와 인증 정보를 삭제
+    localStorage.removeItem('token');
+    this.redirectUrl = null;
+    this.router.navigateByUrl('/');
+  }
 }
