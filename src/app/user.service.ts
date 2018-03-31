@@ -33,4 +33,9 @@ export class UserService {
   removeTodo(todo_id: number): Observable<ResultVO> {
     return this.http.delete<ResultVO>(this.SERVER + `/api/todo?todo_id=${todo_id}`);
   }
+
+  // social login  -----------------------------------------------------------------------------------------------------
+  getSocial(site: string) {
+    return this.http.get(this.SERVER + '/api/social?site=' + site);
+  }
 }
