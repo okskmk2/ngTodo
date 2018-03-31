@@ -18,13 +18,22 @@ import {UserService} from './user.service';
 import {FormsModule} from '@angular/forms';
 import { HighlightDirective } from './highlight.directive';
 import { MydatePipe } from './mydate.pipe';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { NicknameComponent } from './nickname/nickname.component';
+import { ChatComponent } from './chat/chat.component';
+import {AuthGuardService} from './auth/auth-guard.service';
 
 const routes: Routes = [
   // 사용자 화면
   {path: '', component: IndexComponent, children: [
       {path: '', component: HomeComponent},
       {path: 'jquery', component: JqueryComponent},
-      {path: 'angular', component: AngularComponent}
+      {path: 'angular', component: AngularComponent},
+      {path: 'login', component: LoginComponent},
+      {path: 'register', component: RegisterComponent},
+      {path: 'nickname', component: NicknameComponent},
+      {path: 'chat', component: ChatComponent}
     ]},
   // 참고: 향후 관리자 생성 모듈
   { path: 'admin', loadChildren: 'app/admin/admin.module#AdminModule'}
@@ -39,6 +48,10 @@ const routes: Routes = [
     JqueryComponent,
     HighlightDirective,
     MydatePipe,
+    LoginComponent,
+    RegisterComponent,
+    NicknameComponent,
+    ChatComponent,
     AngularComponent
   ],
   imports: [
@@ -57,7 +70,7 @@ const routes: Routes = [
     MatInputModule,
     MatSnackBarModule,
   ],
-  providers: [UserService],
+  providers: [UserService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
