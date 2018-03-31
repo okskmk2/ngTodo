@@ -18,7 +18,11 @@ export class NewsComponent implements OnInit {
       page_size: 5
     };
     this.adminService.findNews(page)
-      .subscribe(body => console.log(body));
+      .subscribe(body => {
+        console.log(body);
+        this.newsList = body.data;
+        // total 값 저장
+      });
   }
 
 }
